@@ -1,0 +1,102 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "dp_crud";
+
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="Section_top">
+
+		<div class="container">
+			<form action="ad.php" 
+				method="post">
+				
+			<h4 class="display-4 text-center">Add Product</h4><hr><br>
+			
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="name" 
+					class="form-control" 
+					id="name" 
+					name="name">
+			</div>
+
+			<div class="form-group">
+				<label for="marque">Marque</label>
+				<input type="marque" 
+					class="form-control" 
+					id="marque" 
+					name="marque" >
+			</div>
+
+			<div class="form-group">
+				<label for="prix">prix</label>
+				<input type="prix" 
+					class="form-control" 
+					id="prix" 
+					name="prix">
+			</div>
+
+			<div class="form-group">
+				<label for="qte">qte</label>
+				<input type="qte" 
+					class="form-control" 
+					id="qte" 
+					name="qte">
+			</div>
+
+            <div class="form-group">
+				<label for="etat">etat</label>
+				<input type="etat" 
+					class="form-control" 
+					id="etat" 
+					name="etat">
+			</div>
+
+			
+
+			<button type="submit" 
+					class="btn btn-primary"
+					name="update">Add</button>
+				
+			</form>
+        <?php
+        } catch(PDOException $e) {
+                                                echo "Error: " . $e->getMessage();
+                                              }
+                                              $conn = null;
+                                              ?>
+
+
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
