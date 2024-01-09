@@ -94,7 +94,7 @@ session_start();
                                               ?>
                                       </tbody>
                                       <div class="link-right">
-                                          <a href="add.php" class="link-primary">Add Product</a>
+                                          <a href="add.html" class="link-primary">Add Product</a>
                                       </div>
                                       
                                       <div  style="text-align: left;">

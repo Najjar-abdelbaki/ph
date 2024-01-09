@@ -1,25 +1,11 @@
-<?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dp_crud";
-
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-
-?>
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Update</title>
+	<title>Add</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -79,12 +65,8 @@ try {
 					name="update">Add</button>
 				
 			</form>
-        <?php
-        } catch(PDOException $e) {
-                                                echo "Error: " . $e->getMessage();
-                                              }
-                                              $conn = null;
-                                              ?>
+       
+                                              
 
 
 		</div>
